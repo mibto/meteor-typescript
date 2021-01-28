@@ -158,6 +158,8 @@ export class TSBuild {
     function compile() {
       const pcomp = logger.newProfiler(`compile ${filePath}`);
       const result = compileService.compile(filePath, csOptions.moduleName);
+      console.log(filePath);
+      console.log(result);
       pcomp.end();
       return result;
     }
